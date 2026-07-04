@@ -31,7 +31,7 @@ const prefilled = [
   [false,true,false,true],
   [false,false,true,false],
   [false,false,false,true],
-  [false,false,true,false]
+  [false,false,false,false]
 ];
 
 const gridEl = document.getElementById("grid");

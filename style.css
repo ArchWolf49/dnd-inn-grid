@@ -1,142 +1,130 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2870
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+:root{
+  --cell-size: 90px;
+}
 
-\f0\fs24 \cf0 :root\{\
-  --cell-size: 90px; /* medium icons */\
-\}\
-\
-*\{\
-  box-sizing:border-box;\
-\}\
-\
-body\{\
-  margin:0;\
-  padding:0;\
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;\
-  color:#f5f0e6;\
-  background:#000;\
-  background-image:url("assets/table-bg.jpg"); /* save your wood image as this */\
-  background-size:cover;\
-  background-position:center;\
-\}\
-\
-.overlay\{\
-  min-height:100vh;\
-  display:flex;\
-  flex-direction:column;\
-  align-items:center;\
-  justify-content:flex-start;\
-  padding:24px;\
-  background:linear-gradient(\
-    to bottom,\
-    rgba(0,0,0,0.55),\
-    rgba(0,0,0,0.75)\
-  );\
-\}\
-\
-h1\{\
-  margin:0 0 8px;\
-  font-size:1.6rem;\
-  letter-spacing:0.08em;\
-  text-transform:uppercase;\
-\}\
-\
-.hint\{\
-  margin:0 0 18px;\
-  max-width:520px;\
-  text-align:center;\
-  font-size:0.9rem;\
-  color:#e0d4c4;\
-\}\
-\
-.grid\{\
-  display:grid;\
-  grid-template-columns:repeat(4, var(--cell-size));\
-  grid-template-rows:repeat(4, var(--cell-size));\
-  gap:18px; /* spacing only; no visible grid */\
-  margin-bottom:14px;\
-\}\
-\
-/* invisible cells, just click areas */\
-.cell\{\
-  width:var(--cell-size);\
-  height:var(--cell-size);\
-  position:relative;\
-  cursor:pointer;\
-  display:flex;\
-  align-items:center;\
-  justify-content:center;\
-\}\
-\
-/* engraved icon container */\
-.icon-wrap\{\
-  width:70%;\
-  height:70%;\
-  display:flex;\
-  align-items:center;\
-  justify-content:center;\
-  filter:\
-    saturate(0.9)\
-    brightness(0.9);\
-  mix-blend-mode:multiply;\
-  box-shadow:\
-    inset 0 0 6px rgba(0,0,0,0.6),\
-    0 0 4px rgba(0,0,0,0.7);\
-  border-radius:6px;\
-\}\
-\
-/* SVG image */\
-.cell img\{\
-  max-width:100%;\
-  max-height:100%;\
-  display:block;\
-\}\
-\
-/* prefilled cells cannot be changed */\
-.cell.prefilled\{\
-  cursor:default;\
-\}\
-\
-/* feedback glow */\
-.cell.correct .icon-wrap\{\
-  box-shadow:\
-    inset 0 0 6px rgba(0,0,0,0.6),\
-    0 0 10px rgba(46,204,113,0.7);\
-\}\
-\
-.cell.wrong .icon-wrap\{\
-  box-shadow:\
-    inset 0 0 6px rgba(0,0,0,0.6),\
-    0 0 10px rgba(231,76,60,0.7);\
-\}\
-\
-.controls\{\
-  display:flex;\
-  align-items:center;\
-  gap:10px;\
-\}\
-\
-button\{\
-  padding:8px 14px;\
-  border:none;\
-  border-radius:4px;\
-  background:#443a27;\
-  color:#f5f0e6;\
-  font-size:0.9rem;\
-  cursor:pointer;\
-  box-shadow:0 2px 4px rgba(0,0,0,0.5);\
-\}\
-\
-button:hover\{\
-  background:#5a4b31;\
-\}\
-\
-.status\{\
-  min-width:160px;\
-  font-size:0.9rem;\
-  color:#f5f0e6;\
-\}}
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color:#f5f0e6;
+  background:#000;
+  background-image:url("assets/table-bg.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.overlay{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:24px;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.75)
+  );
+}
+
+h1{
+  margin:0 0 8px;
+  font-size:1.6rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+
+.hint{
+  margin:0 0 18px;
+  max-width:520px;
+  text-align:center;
+  font-size:0.9rem;
+  color:#e0d4c4;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4, var(--cell-size));
+  grid-template-rows:repeat(4, var(--cell-size));
+  gap:18px;
+  margin-bottom:14px;
+}
+
+.cell{
+  width:var(--cell-size);
+  height:var(--cell-size);
+  position:relative;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icon-wrap{
+  width:70%;
+  height:70%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  filter:
+    saturate(0.9)
+    brightness(0.9);
+  mix-blend-mode:multiply;
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.6),
+    0 0 4px rgba(0,0,0,0.7);
+  border-radius:6px;
+}
+
+.cell img{
+  max-width:100%;
+  max-height:100%;
+  display:block;
+}
+
+.cell.prefilled{
+  cursor:default;
+}
+
+.cell.correct .icon-wrap{
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.6),
+    0 0 10px rgba(46,204,113,0.7);
+}
+
+.cell.wrong .icon-wrap{
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.6),
+    0 0 10px rgba(231,76,60,0.7);
+}
+
+.controls{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+button{
+  padding:8px 14px;
+  border:none;
+  border-radius:4px;
+  background:#443a27;
+  color:#f5f0e6;
+  font-size:0.9rem;
+  cursor:pointer;
+  box-shadow:0 2px 4px rgba(0,0,0,0.5);
+}
+
+button:hover{
+  background:#5a4b31;
+}
+
+.status{
+  min-width:160px;
+  font-size:0.9rem;
+  color:#f5f0e6;
+}

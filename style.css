@@ -10,7 +10,7 @@
 body{
   margin:0;
   padding:0;
-  font-family:"UnifrakturMaguntia", system-ui, -apple-system, BlinkMacSystemFont, "UnifrakturMaguntia", sans-serif;
+  font-family:UnifrakturMaguntia, system-ui, -apple-system, BlinkMacSystemFont, "UnifrakturMaguntia", sans-serif;
   color:#f5f0e6;
   background:#000;
   background-image:url("assets/table-bg.png");

@@ -89,3 +89,19 @@ h1{
 
 .cell img{
   max
+  
+button{
+  padding:8px 14px;
+  border:none;
+  border-radius:4px;
+  background:#443a27;
+  color:#f5f0e6;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow:0 2px 4px rgba(0,0,0,0.5);
+  font-family: 'Unifraktur Maguntia', serif;
+}
+
+button:hover{
+  background:#5a4b31;
+}

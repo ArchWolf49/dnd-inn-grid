@@ -172,9 +172,9 @@ function checkPuzzle(){
 
   if(allFilled && rowsOk && colsOk && matchesSolution){
     markAllCorrect();
-    statusEl.textContent = "The pattern is true – the table shows only a tavern game.";
+    statusEl.textContent = "A noble bout - well met!";
   }else{
-    statusEl.textContent = "The carving is not yet right.";
+    statusEl.textContent = "Ha! Thy reckoning is out of square.";
   }
 }
 

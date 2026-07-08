@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Enchanted Land';
+  src: url('fonts/Enchanted Land.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 :root{
   --cell-size: 90px;
